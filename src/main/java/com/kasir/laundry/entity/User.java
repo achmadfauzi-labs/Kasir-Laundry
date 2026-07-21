@@ -35,6 +35,10 @@ public class User {
     @Column(name = "phone_number", length = 20)
     private String phoneNumber;
 
+    @Column(name = "role", nullable = false, length = 20)
+    @Builder.Default
+    private String role = "CASHIER";
+
     @Column(name = "last_login_at")
     private LocalDateTime lastLoginAt;
 
